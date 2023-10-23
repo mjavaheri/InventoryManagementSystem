@@ -29,7 +29,8 @@ namespace IMS.Application.Tests.Features.Products.Query
             var result = await handler.Handle(command, CancellationToken.None);
 
             // Assert
-            Assert.Equal(result.Title, cachedProduct.Title);
+            Assert.Equal(cachedProduct.Title, result.Title);
+
             mockRepository.Verify(x => x.GetById(It.IsAny<int>()), Times.Never);
         }
 
