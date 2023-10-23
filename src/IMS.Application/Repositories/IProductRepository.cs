@@ -13,5 +13,6 @@ namespace IMS.Application.Repositories
         Task<Product> Create(Product product);
         Task<Product> GetById(int id);
         Task Update(Product product);
+        Task<bool> IsProductExists(int productId);
     }
 }
