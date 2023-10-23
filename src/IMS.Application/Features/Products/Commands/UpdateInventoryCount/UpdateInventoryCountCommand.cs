@@ -9,6 +9,7 @@ namespace IMS.Application.Features.Products.Commands.UpdateInventoryCount
 {
     public sealed class UpdateInventoryCountCommand : IRequest
     {
+        public int Id { get; set; }
         public int Value { get; set; }
         public byte[] RowVersion { get; set; }
     }
