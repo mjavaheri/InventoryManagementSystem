@@ -1,3 +1,4 @@
+using IMS.Api.Middlewares;
 using IMS.Application;
 using IMS.Infrastructure;
 
@@ -32,6 +33,7 @@ namespace IMS.Api
 
             app.UseAuthorization();
 
+            app.UseMiddleware<ExceptionHandlerMiddleware>();
 
             app.MapControllers();
 
