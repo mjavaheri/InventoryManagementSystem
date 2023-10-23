@@ -32,6 +32,16 @@ namespace IMS.Domain.Entities
             InventoryCount = value;
         }
 
+        public void DecreaseInventoryCount()
+        {
+            if(InventoryCount == 0)
+            {
+                throw new InvalidOperationException($"product {Id} inventory count is zero.");
+            }
+
+            InventoryCount -= 1;
+        }
+
         private void ValidateTitle(string title)
         {
             if (string.IsNullOrWhiteSpace(title))
