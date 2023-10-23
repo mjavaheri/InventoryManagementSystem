@@ -25,6 +25,12 @@ namespace IMS.Domain.Entities
             InventoryCount = _defualtInventoryCount;
         }
 
+        public void UpdateInventoryCount(int value)
+        {
+            ValidateInventoryCount(value);
+            InventoryCount = value;
+        }
+
         private void ValidateTitle(string title)
         {
             if (string.IsNullOrWhiteSpace(title))
@@ -46,5 +52,10 @@ namespace IMS.Domain.Entities
                 throw new BadRequestException("Product's discount is not valid");
         }
 
+        private void ValidateInventoryCount(int inventoryCount)
+        {
+            if (inventoryCount < 0)
+                throw new BadRequestException("Product's inventory count is not valid");
+        }
     }
 }
