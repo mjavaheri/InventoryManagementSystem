@@ -1,13 +1,8 @@
 ﻿using IMS.Domain.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IMS.Domain.Entities
 {
-    public class Product
+    public sealed class Product
     {
         private const int _defualtInventoryCount = 100;
 
@@ -34,7 +29,7 @@ namespace IMS.Domain.Entities
             if (string.IsNullOrWhiteSpace(title))
                 throw new BadRequestException("Product's title can not be null or whitespace");
 
-            if(title.Length > 40)
+            if (title.Length > 40)
                 throw new BadRequestException("Product's title can not be greater than 40");
         }
 
