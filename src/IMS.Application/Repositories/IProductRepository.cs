@@ -12,5 +12,6 @@ namespace IMS.Application.Repositories
         Task<bool> IsProductTitleUnique(string title);
         Task<Product> Create(Product product);
         Task<Product> GetById(int id);
+        Task Update(Product product);
     }
 }
