@@ -11,6 +11,7 @@ namespace IMS.Domain.Entities
     {
         public int Id { get; private set; }
         public string Name { get; private set; }
+        public ICollection<Order> Orders { get; } = new List<Order>();
 
         public User(string name)
         {

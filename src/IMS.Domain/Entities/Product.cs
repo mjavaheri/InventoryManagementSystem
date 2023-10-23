@@ -12,6 +12,7 @@ namespace IMS.Domain.Entities
         public decimal Price { get; private set; }
         public byte Discount { get; private set; }
         public byte[] RowVersion { get; set; }
+        public ICollection<Order> Orders { get; } = new List<Order>();
 
         public Product(string title, decimal price, byte discount)
         {
