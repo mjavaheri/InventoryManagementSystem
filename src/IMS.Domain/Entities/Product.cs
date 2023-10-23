@@ -11,6 +11,7 @@ namespace IMS.Domain.Entities
         public int InventoryCount { get; private set; }
         public decimal Price { get; private set; }
         public byte Discount { get; private set; }
+        public byte[] RowVersion { get; set; }
 
         public Product(string title, decimal price, byte discount)
         {
