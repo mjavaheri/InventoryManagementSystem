@@ -10,4 +10,12 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.12" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\IMS.Application\IMS.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="EF\Configs\" />
+  </ItemGroup>
+
 </Project>
