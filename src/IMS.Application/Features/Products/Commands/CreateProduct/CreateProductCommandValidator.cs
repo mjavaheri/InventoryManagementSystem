@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using IMS.Application.Repositories;
 
-namespace IMS.Application.Features.Products.Commands
+namespace IMS.Application.Features.Products.Commands.CreateProduct
 {
     public sealed class CreateProductCommandValidator : AbstractValidator<CreateProductCommand>
     {
@@ -28,7 +28,7 @@ namespace IMS.Application.Features.Products.Commands
 
         private async Task<bool> IsProductTitleUnique(string title, CancellationToken token)
         {
-            return !(await _productRepository.IsProductTitleUnique(title));
+            return !await _productRepository.IsProductTitleUnique(title);
         }
     }
 }

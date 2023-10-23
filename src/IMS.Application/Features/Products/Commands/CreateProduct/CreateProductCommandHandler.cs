@@ -3,7 +3,7 @@ using IMS.Application.Repositories;
 using IMS.Domain.Entities;
 using MediatR;
 
-namespace IMS.Application.Features.Products.Commands
+namespace IMS.Application.Features.Products.Commands.CreateProduct
 {
     public sealed class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, int>
     {

@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace IMS.Application.Features.Products.Commands
+namespace IMS.Application.Features.Products.Commands.CreateProduct
 {
     public sealed class CreateProductCommand : IRequest<int>
     {
