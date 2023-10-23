@@ -14,8 +14,4 @@
     <ProjectReference Include="..\IMS.Application\IMS.Application.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="EF\Configs\" />
-  </ItemGroup>
-
 </Project>
